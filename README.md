@@ -1,10 +1,10 @@
 # Applied Computer Science - Uniurb - Web App
 
+Computer network project for the summer session 2019.
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.7.
 
 It relies on a [web service](https://github.com/damiandominella/cn-uni-api) that fetches and scrapes data from the [university website](https://informatica.uniurb.it/). 
-
-## Website
 
 
 ## Development server
