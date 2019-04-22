@@ -1,0 +1,15 @@
+@import "../../../assets/variables.scss";
+
+app-home-page {
+    img {
+        width: 70%;
+        display: block;
+        margin: 0 auto 20px;
+    }
+    h1 {
+        font-size: 22px;
+    }
+    p {
+        font-size: 15px;
+    }
+}

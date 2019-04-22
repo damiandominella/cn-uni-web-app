@@ -1,0 +1,10 @@
+<div class="blog" *ngIf="!error && !isLoading">
+  <app-post-card *ngFor="let post of blog" [post]="post"></app-post-card>
+</div>
+<div class="error" *ngIf="error && !isLoading">
+  Something bad happened, it's not possible to get the data
+  <button class="btn btn-primary" (click)="loadData()">Retry</button>
+</div>
+<div class="loading" *ngIf="isLoading">
+  <i class="fas fa-spinner fa-pulse"></i>
+</div>

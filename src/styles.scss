@@ -1,1 +1,111 @@
 /* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/scss/bootstrap.scss";
+@import "./assets/variables.scss";
+@import "./assets/responsive.scss";
+
+body {
+    background: #f5f5f5;
+
+    .app {
+        background: $white;
+        width: 80%;
+        margin: 10px auto 0;
+        border-radius: 5px;
+        overflow: hidden;
+        position: relative;
+        border: 2px solid $green;
+
+        a {
+            color: $green;
+            font-weight: 500;
+            &:hover {
+                text-decoration: none;
+               color: $lightGreen;
+            }
+        }
+    
+        .main-wrapper {
+            height: calc(100vh - #{$toolbarHeight});
+            overflow: scroll;
+            padding: 20px 20px 50px;
+    
+            // styling errors here since they are all the same
+    
+            .error {
+                text-align: center;
+                font-size: 15px;
+                margin-top: 20px;
+                button {
+                    display: block;
+                    margin: 20px auto;
+                    background: $green;
+                    border-radius: 5px;
+                    text-transform: uppercase;
+                    font-weight: 500;
+                    font-size: 14px;
+                    border: none;
+                    &:hover, &:active, &:focus {
+                        outline: none;
+                        background: $lightGreen;
+                    }
+                }
+            }
+
+            .loading {
+                text-align: center;
+                margin-top: 30px;
+                i {
+                    color: $green;
+                    font-size: 30px;
+                }
+            }
+        }
+
+        @include respond-to(xs) {
+            margin: 0;
+            width: 100%;
+            border: none;
+            border-radius: 0;
+            .main-wrapper {
+                height: 100vh;
+            }
+        }
+    }
+
+    .footer {
+        padding: 5px 0;
+        text-align: center;
+        font-size: 12px;
+        color: $grey;
+        ul.socials {
+            list-style: none;
+            margin: 5px 0 0;
+            padding: 0;
+            > li {
+                display: inline-block;
+                &:not(:last-child) {
+                    margin-right: 3px;
+                }
+                > a {
+                    cursor: pointer;
+                    display: block;
+                    width: 20px;
+                    height: 20px;
+                    padding-top: 1px;
+                    font-size: 12px;
+                    text-align: center;
+                    border-radius: 50%;
+                    background: $grey;;
+                    &:hover {
+                        background: $black;
+                    }
+                    > i {
+                        pointer-events: none;
+                        color: $white;
+                    }
+                }
+            }
+        }
+    }
+   
+}

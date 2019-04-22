@@ -1,0 +1,25 @@
+<div class="teacher-card">
+  <div>
+    <img [src]="teacher.imgUrl">
+  </div>
+  <div class="info">
+    <div>
+      <h3 class="name">{{teacher.name}}</h3>
+      <p class="email">{{teacher.email}}</p>
+      <p class="phone"><span *ngIf="teacher.phone">{{teacher.phone}}</span></p>
+      <p class="reception"><span *ngIf="teacher.receptionHours">{{teacher.receptionHours}}</span></p>
+      <ul class="contacts">
+        <li class="phone" *ngIf="teacher.phone">
+          <a [href]="'tel:' + teacher.phone">
+            <i class="fas fa-phone"></i>
+          </a>
+        </li>
+        <li class="email" *ngIf="teacher.email">
+          <a [href]="'mailto:' + teacher.email">
+            <i class="fas fa-envelope"></i>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

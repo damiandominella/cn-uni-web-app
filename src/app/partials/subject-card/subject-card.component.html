@@ -1,0 +1,8 @@
+<div class="subject-card">
+  <h3 class="name" (click)="onSubjectClick($event)">
+    {{subject.name}}
+    <i *ngIf="subject.link" class="fas fa-link"></i>
+  </h3>
+  <p class="cfu">CFU: {{subject.cfu}}</p>
+  <p class="year" *ngIf="subject.year">Year: {{subject.year}}</p>
+</div>

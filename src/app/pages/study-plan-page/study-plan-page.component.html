@@ -1,0 +1,18 @@
+<div class="switch" *ngIf="!error">
+  <div (click)="onSwitch(false)" [ngClass]="{'active': !isPartTime}">
+    full-time
+  </div>
+  <div (click)="onSwitch(true)" [ngClass]="{'active': isPartTime}">
+    part-time
+  </div>
+</div>
+<div class="subjects" *ngIf="!error && !isLoading">
+  <app-subject-card *ngFor="let subject of subjects" [subject]="subject"></app-subject-card>
+</div>
+<div class="error" *ngIf="error && !isLoading">
+  Something bad happened, it's not possible to get the data
+  <button class="btn btn-primary" (click)="loadData()">Retry</button>
+</div>
+<div class="loading" *ngIf="isLoading">
+  <i class="fas fa-spinner fa-pulse"></i>
+</div>

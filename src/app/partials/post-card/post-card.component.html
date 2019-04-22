@@ -1,0 +1,29 @@
+<div class="post-card">
+  <h3 class="title">{{post.title}}</h3>
+  <p class="author">{{post.author}}</p>
+  <div class="content" [innerHTML]="post.contentEncoded"></div>
+  <span class="date">{{post.pubDate | date }}</span>
+
+  <ul class="social-sharing">
+    <li class="facebook">
+      <a (click)="share('facebook')">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+    </li>
+    <li class="twitter">
+      <a (click)="share('twitter')">
+        <i class="fab fa-twitter"></i>
+      </a>
+    </li>
+    <li class="whatsapp">
+      <a (click)="share('whatsapp')">
+        <i class="fab fa-whatsapp"></i>
+      </a>
+    </li>
+    <li class="telegram">
+      <a (click)="share('telegram')">
+        <i class="fab fa-telegram"></i>
+      </a>
+    </li>
+  </ul>
+</div>
