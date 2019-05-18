@@ -1,4 +1,5 @@
 @import "../../../assets/variables.scss";
+@import "../../../assets/responsive.scss";
 
 app-teacher-card {
     .teacher-card {
@@ -12,20 +13,40 @@ app-teacher-card {
         overflow: hidden;
         height: 180px;
 
-        div {
+        @include respond-to(xxs) {
+            height: 220px;
+            > div:first-child {
+                display: none;
+            }
+            div.info img {
+                width: 65px;
+                border-radius: 50%;
+                margin-right: 10px;
+            }
+        }
+
+        > div {
             img {
                 width: 180px;
             }
 
             &.info {
                 position: relative;
-                margin-left: 20px;
+                margin-left: 15px;
                 width: 100%;
                 > div {
+                    width: 100%;
+                    padding-right: 15px;
                     position: absolute;
                     top: 50%;
                     left: 0;
                     transform: translateY(-50%);
+
+                    img {
+                        @include respond-to(from-xs) {
+                            display: none;
+                        }
+                    }
                 }
             }
 

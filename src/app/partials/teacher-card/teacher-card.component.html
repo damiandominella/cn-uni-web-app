@@ -4,7 +4,10 @@
   </div>
   <div class="info">
     <div>
-      <h3 class="name">{{teacher.name}}</h3>
+      <h3 class="name">
+          <img [src]="teacher.imgUrl">
+        {{teacher.name}}
+      </h3>
       <p class="email">{{teacher.email}}</p>
       <p class="phone"><span *ngIf="teacher.phone">{{teacher.phone}}</span></p>
       <p class="reception"><span *ngIf="teacher.receptionHours">{{teacher.receptionHours}}</span></p>
