@@ -19,6 +19,7 @@ app-post-card {
             color: $green;
         }
         .content {
+            word-break: break-word;
             font-size: 14px;
             img {
                 max-width: 100%;

@@ -5,7 +5,7 @@
 export const environment = {
   production: false,
   api: {
-    endpoint: "https://uniurb-aps-cn-api.herokuapp.com/api/"
+    endpoint: "http://0.0.0.0:3000/api/"
   }
 };
 
